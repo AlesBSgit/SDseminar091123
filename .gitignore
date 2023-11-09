@@ -1,3 +1,6 @@
 *.app
 .vscode/launch.json
 .vscode/rad.json
+cache_*
+.vscode/.altemplates/table.dictionary.json
+.vscode/.altemplates/table.entry.json
