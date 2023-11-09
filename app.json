@@ -1,0 +1,33 @@
+{
+  "id": "c4dd6134-7b8e-407c-8848-d7ea7eebb025",
+  "name": "SDseminar",
+  "publisher": "D.E. Veloper",
+  "version": "23.0.0.0",
+  "brief": "Seminar Management Solution",
+  "description": "Here is my Seminar Management Solution.",
+  "privacyStatement": "",
+  "EULA": "https://ba-consult.dk/downloads/warning.txt",
+  "help": "",
+  "url": "",
+  "logo": "./images/Logo.jpg",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "23.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "12.0",
+  "features": [
+    "NoImplicitWith",
+    "TranslationFile"
+  ]
+}
