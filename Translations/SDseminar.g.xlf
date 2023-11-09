@@ -28,6 +28,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension CSD ResourceExt - Field CSD Resource Type - Property OptionCaption</note>
         </trans-unit>
+        <trans-unit id="EnumExtension 2592783624 - EnumValue 1179071405 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2592783624">
+          <source>Posted Seminar Registration</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Comment Line Table Name - EnumValue CSD Posted Seminar Registration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 2592783624 - EnumValue 1023874429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2592783624">
+          <source>Seminar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Comment Line Table Name - EnumValue CSD Seminar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 2592783624 - EnumValue 3811004094 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 2592783624">
+          <source>Seminar Registration</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension Comment Line Table Name - EnumValue CSD Seminar Registration - Property Caption</note>
+        </trans-unit>
       </group>
     </body>
   </file>
