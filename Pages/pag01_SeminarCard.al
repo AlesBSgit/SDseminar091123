@@ -14,7 +14,7 @@ page 50101 "CSD Seminar Card"
                     AssistEdit = true;
                     trigger OnAssistEdit();
                     begin
-                        if AssistEdit then
+                        if Rec.AssistEdit then
                             CurrPage.Update;
                     end;
                 }
