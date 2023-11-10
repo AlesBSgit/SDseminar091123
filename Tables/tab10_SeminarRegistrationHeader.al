@@ -313,10 +313,12 @@ table 50110 "CSD Seminar Reg. Header"
         Text005: Label 'Should the new %1 be copied to all %2 that are not yet invoiced?';
         Text006: Label 'You cannot delete the Seminar Registration, because there is at least one %1.';
 
+        AllowDelete: Boolean;
+
 
     trigger OnDelete();
     begin
-        if (CurrFieldNo > 0) then
+        if not AllowDelete then
             TestField(Status, Status::Canceled);
 
         SeminarRegLine.Reset();
@@ -376,5 +378,11 @@ table 50110 "CSD Seminar Reg. Header"
             exit(true);
         end;
     end;
+
+    procedure SetAllowDelete(InAllowDelete: Boolean);
+    begin
+        AllowDelete := InAllowDelete;
+    end;
+
 }
 
