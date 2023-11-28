@@ -25,51 +25,79 @@ page 50110 "CSD Seminar Registration"
                     begin
                         if Rec.AssistEdit(xRec) then
                             CurrPage.Update();
+                        FieldIsMandatory := true;
+                    end;
+
+                    trigger OnValidate()
+                    begin
+                        FieldIsMandatory := true;
                     end;
                 }
+
                 field("Starting Date"; Rec."Starting Date")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'enter the starting date of the seminar registration';
+                    ShowMandatory = FieldIsMandatory;
+
+                    trigger OnValidate()
+                    var
+                        DateBeforeTodayWarning: Label 'Date Is Before Today';
+                    begin
+                        if Rec."Starting Date" < WorkDate() then
+                            DateBeforeTodayNotification.Message('Date is Before Today');
+                            DateBeforeTodayNotification.Send();
+                    end;
                 }
                 field("Seminar No."; Rec."Seminar No.")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar No. is mandatory';
                 }
                 field("Seminar Name"; Rec."Seminar Name")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field("Instructor Resource No."; Rec."Instructor Resource No.")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Instructor Resource No.';
                 }
                 field("Instructor Name"; Rec."Instructor Name")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Instructor Resource No.';
                 }
                 field("Posting Date"; Rec."Posting Date")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field("Document Date"; Rec."Document Date")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field(Status; Rec.Status)
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field(Duration; Rec.Duration)
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field("Minimum Participants"; Rec."Minimum Participants")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field("Maximum Participants"; Rec."Maximum Participants")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
             }
             part(SeminarRegistrationLines; "CSD Seminar Reg. Subpage")
@@ -82,34 +110,42 @@ page 50110 "CSD Seminar Registration"
                 field("Room Resource No."; Rec."Room Resource No.")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field("Room Name"; Rec."Room Name")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field("Room Address"; Rec."Room Address")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field("Room Address 2"; Rec."Room Address 2")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field("Room Post Code"; Rec."Room Post Code")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field("Room City"; Rec."Room City")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field("Room Country/Reg. Code"; Rec."Room Country/Reg. Code")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
                 field("Room County"; Rec."Room County")
                 {
                     ApplicationArea = All;
+                    Tooltip = 'Seminar Name';
                 }
             }
             group(Invoicing)
@@ -194,5 +230,17 @@ page 50110 "CSD Seminar Registration"
             }
         }
     }
+
+
+
+    var
+        FieldIsMandatory: Boolean;
+        DateBeforeTodayNotification: Notification;
+
+    trigger OnInsertRecord(belowXRec: Boolean): Boolean
+    var
+    begin
+        FieldIsMandatory := true;
+    end;
 }
 

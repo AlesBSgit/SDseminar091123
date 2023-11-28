@@ -2,6 +2,9 @@ table 50118 "CSD Posted Seminar Reg. Header"
 {
     // CSD1.00 - 2018-01-01 - D. E. Veloper
     // Chapter 7 - Lab 3-1
+
+    // Chapter 8 - Lab 2 -3
+    // Added LookupPageId & DrilldownPageId properties
     Caption = 'Posted Seminar Reg. Header';
     LookUpPageID = "CSD Posted Seminar Reg. List";
     DrillDownPageID = "CSD Posted Seminar Reg. List";

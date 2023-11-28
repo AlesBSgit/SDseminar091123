@@ -1,6 +1,9 @@
 *.app
 .vscode/launch.json
 .vscode/rad.json
+.vscode/.altemplates
+.vscode/.alcache
 cache_*
 .vscode/.altemplates/table.dictionary.json
 .vscode/.altemplates/table.entry.json
+Translations/SDseminar.g.xlf

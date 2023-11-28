@@ -4,6 +4,9 @@ table 50110 "CSD Seminar Reg. Header"
     //   Chapter 6 - Lab 1-3 & Lab 1-4
     //     - Created new table
 
+    // Chapter 9 - Lab 1-1
+    // - Added new field "No. Printed
+
     Caption = 'Seminar Registration Header';
 
     fields
@@ -283,6 +286,11 @@ table 50110 "CSD Seminar Reg. Header"
         {
             DataClassification = AccountData;
         }
+        field(40; "No. Printed"; Integer)
+        {
+            Caption = 'No. Printed';
+            Editable = false;
+        }
 
     }
 
@@ -353,6 +361,10 @@ table 50110 "CSD Seminar Reg. Header"
         end;
 
         InitRecord();
+
+        if GetFilter("Seminar No.") <> '' then
+            if GetRangeMin("Seminar No.") = GetRangeMax("Seminar No.") then
+                Validate("Seminar No.", GetRangeMin("Seminar No."));
     end;
 
 
