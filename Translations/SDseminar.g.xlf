@@ -1108,6 +1108,36 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Registration Line - Field To Invoice - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3673433698 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Seminar Report Selections</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Report Selections - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3673433698 - Field 1272245069 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Report Selections - Field Report ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3673433698 - Field 4101026147 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Report Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Report Selections - Field Report Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3673433698 - Field 4154341761 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sequence</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Report Selections - Field Sequence - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3673433698 - Field 1510562767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Report Selections - Field Usage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3673433698 - Field 1510562767 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Registration</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Report Selections - Field Usage - Property OptionCaption</note>
+        </trans-unit>
         <trans-unit id="Table 4035078560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Seminar Setup</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1427,6 +1457,21 @@
           <source>Post</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CSD Seminar Registration List - Action Post - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3350628503 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Seminar Report Selection</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CSD Seminar Report Selection - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3350628503 - Control 887890843 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Usage</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CSD Seminar Report Selection - Control ReportUsage2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3350628503 - Control 887890843 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Registration</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CSD Seminar Report Selection - Control ReportUsage2 - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="Page 4035078560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Seminar Setup</source>
