@@ -3,7 +3,22 @@ codeunit 50149 "CSD InstallSeminar"
     Subtype = Install;
 
     trigger OnInstallAppPerCompany();
+    var
+        WebService: Record "Web Service Aggregate";
+        UpgradeTag: CodeUnit "Upgrade Tag";
+        WebServiceMgt: Codeunit "Web Service Management";
+        WebserviceCreatedTxt: Label 'WebserviceCreatedTxt';
+        SettingsUpdatedForSeminarUsersTxt: Label 'SettingsUpdatedForSeminarUsersTxt';
     begin
+        if not UpgradeTag.HasUpgradeTag(SettingsUpdatedForSeminarUsersTxt) then begin
+            SetupSeminarUsers();
+            UpgradeTag.SetUpgradeTag(SettingsUpdatedForSeminarUsersTxt);
+        end;
+        if not UpgradeTag.HasUpgradeTag(WebserviceCreatedTxt) then begin
+            WebServiceMgt.CreateTenantWebService(WebService."Object Type"::Page, 50143, 'WSCustomers', true);
+            UpgradeTag.SetUpgradeTag(WebserviceCreatedTxt);
+        end;
+
         if SeminarSetup.Get() then
             exit;
         InitSetup();
@@ -104,4 +119,13 @@ codeunit 50149 "CSD InstallSeminar"
 
     var
         SeminarSetup: Record "CSD Seminar Setup";
+
+
+    local procedure SetupSeminarUsers()
+    var
+        UserSettings: Record "User Personalization";
+    begin
+        UserSettings.ModifyAll("Profile ID", 'CSD SEMINAR MANAGER');
+    end;
+
 }
